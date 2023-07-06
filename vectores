@@ -1,0 +1,31 @@
+/* 
+PROGRAMA QUE PIDA UN TAMAÑO DE UN VECTOR DEL TIPO STRING "TEXTO"
+A CONTINUACION EL PROGRAMA DEBE PEDIR EL INGRESO DE NOMBRES EN LOS
+ESPACIOS DEL VECTOR 
+Y MOSTRARLOS POR PANTALLA
+*/
+package vectorString;
+import java.util.*;
+public class VectorString
+{
+public static void main(String[] args)
+    {
+    Scanner teclado = new Scanner (System.in);
+    String VECTOR[] ;  // Declarando variable tamaño de vector
+    System.out.println("Ingrese Cantidad de Espacios: ");
+    int tamanio = teclado.nextInt(); //Almacenando en tamanio
+    VECTOR = new String[tamanio];//Almacenando Valores Ingresados
+    int o = 0;
+    for (int i=o;i<tamanio;i++)//LLENANDO VALORES AL VECTOR
+    {
+        System.out.println("Ingrese un Nombre en la POSICION: "+i+": ");
+        VECTOR[i]=teclado.next();//Se guardan los nombres ingresados
+    }                               //en la posicion 1
+    System.out.println("El Vector String es: ");
+    for(int i=0;i<tamanio;i++)//MOSTRANDO EL VECTOR POR PANTALLA
+    {
+        System.out.print("["+VECTOR[i]+"]"+ " ");//mostrando por pantalla
+    }
+    }///cerrando metodo void main
+    
+}//class
